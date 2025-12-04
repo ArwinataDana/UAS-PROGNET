@@ -13,7 +13,7 @@ ini_set('display_errors', 1);
     if (!$con) {
         die("Connection Failed: ". mysqli_connect_error());
     } else {
-        echo "Connected Successfully";
+        // echo "Connected Successfully";
     }
 
 

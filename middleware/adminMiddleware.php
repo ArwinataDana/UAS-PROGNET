@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include('../functions/reuseableFunction.php');
 
 if (isset($_SESSION['auth'])) {
