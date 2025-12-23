@@ -110,30 +110,38 @@ $(document).ready(function() {
 function showToast(message) {
 
     $('#dynamic-toast').remove();
-    
-    var toastHTML = `
-        <div id="dynamic-toast" 
-            class="fixed bottom-6 right-6 z-50 flex items-center w-[320px] p-4 bg-green-100 text-green-700 rounded-lg shadow-lg transition-all duration-300 animate-slide-up">
-            
-            <svg class="w-5 h-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-            
-            <span class="text-sm font-medium">${message}</span>
-            
-            <button onclick="$('#dynamic-toast').fadeOut(300, function(){ $(this).remove(); })" 
-                class="ml-auto hover:opacity-75 font-bold">
-                ✕
+
+    const toastHTML = `
+        <div id="dynamic-toast"
+            class="fixed bottom-6 right-6 z-50 flex items-start gap-3 w-[340px] p-4
+                   bg-white/90 backdrop-blur-md
+                   border border-slate-200
+                   rounded-2xl shadow-xl
+                   text-slate-800
+                   animate-toast-in">
+
+            <!-- Icon -->
+            <div class="flex-shrink-0 mt-0.5">
+                <i class="ri-checkbox-circle-line text-xl"></i>
+            </div>
+
+            <!-- Message -->
+            <div class="flex-1 mt-1">
+                <p class="text-sm font-medium leading-relaxed">
+                    ${message}
+                </p>
+            </div>
+
+            <!-- Close -->
+            <button 
+                onclick="closeDynamicToast()"
+                class="text-slate-400 hover:text-slate-600 transition">
+                <i class="ri-close-line text-lg"></i>
             </button>
         </div>
     `;
-    
+
     $('body').append(toastHTML);
-    
-    // Auto hide setelah 4 detik
-    setTimeout(function() {
-        $('#dynamic-toast').fadeOut(400, function() {
-            $(this).remove();
-        });
-    }, 4000);
+
+    setTimeout(closeDynamicToast, 4000);
 }

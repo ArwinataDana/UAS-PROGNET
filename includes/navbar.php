@@ -25,7 +25,7 @@
                         <i class="ri-shopping-cart-line text-xl"></i>
                     </a>
 
-                    <a href="/profile.php" class="relative flex items-center gap-2 text-slate-600">
+                    <a href="profile.php" class="relative flex items-center gap-2 text-slate-600">
                         <i class="ri-user-line text-xl"></i>
                     </a>
                 </div>
