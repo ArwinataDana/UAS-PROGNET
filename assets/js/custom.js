@@ -75,6 +75,8 @@ $(document).ready(function() {
             },
             dataType: 'json',
             success: function (response) {
+                $('#mycart').load(location.href + " #mycart > *")
+
             }
         });
 
@@ -96,7 +98,9 @@ $(document).ready(function() {
             success: function (response) {
                 if (response.status == 200) {
                     showToast(response.message);
-                    $('#mycart').load(location.href + " #mycart")
+                    // $('#mycart').load(location.href + " #mycart")
+                    $('#mycart').load(location.href + " #mycart > *")
+
                 } else {
                     showToast(response.message);
                 }
@@ -143,5 +147,5 @@ function showToast(message) {
 
     $('body').append(toastHTML);
 
-    setTimeout(closeDynamicToast, 4000);
+    setTimeout(toastHTML, 4000);
 }

@@ -1,5 +1,5 @@
 
-        <div class="max-w-[1400px] mx-auto mt-24">
+        <div class="max-w-[1400px] mx-auto mt-24  px-4">
             <div class="flex flex-col md:flex-row items-start justify-between gap-10 py-10 border-b border-slate-500/30 text-slate-500">
                 <div>
                     <a href="/" class="text-4xl font-semibold text-slate-700">
