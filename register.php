@@ -3,7 +3,7 @@
 session_start();
 
 if (isset($_SESSION['auth'])) {
-    $_SESSION['message'] = "You are already Logged In";
+    $_SESSION['message'] = "Anda sudah masuk ke akun Anda.";
     header('Location: index.php');
     exit();
 }
@@ -19,10 +19,10 @@ include("includes/header.php")
     <div class="p-8 md:p-12">
 
       <h2 class="text-3xl font-semibold text-gray-900 mb-2">
-        Create account
+        Buat Akun
       </h2>
       <p class="text-sm text-gray-500 mb-8">
-        Register to get started
+        Daftar untuk mulai berbelanja
       </p>
 
       <form 
@@ -34,21 +34,21 @@ include("includes/header.php")
         <!-- Name -->
         <div>
           <label class="block text-sm text-gray-600 mb-1">
-            Name
+            Nama
           </label>
           <input
             type="text"
             name="name"
             required
             class="w-full h-11 border-b border-gray-300 bg-transparent text-gray-900 focus:outline-none focus:border-gray-900"
-            placeholder="Your name"
+            placeholder="Nama"
           />
         </div>
 
         <!-- Phone -->
         <div>
           <label class="block text-sm text-gray-600 mb-1">
-            Phone Number
+            No Telp
           </label>
           <input
             type="number"
@@ -62,14 +62,14 @@ include("includes/header.php")
         <!-- Email -->
         <div>
           <label class="block text-sm text-gray-600 mb-1">
-            Email address
+            Email
           </label>
           <input
             type="email"
             name="email"
             required
             class="w-full h-11 border-b border-gray-300 bg-transparent text-gray-900 focus:outline-none focus:border-gray-900"
-            placeholder="name@email.com"
+            placeholder="nama@gmail.com"
           />
         </div>
 
@@ -107,7 +107,7 @@ include("includes/header.php")
           name="register_btn"
           class="w-full h-11 rounded-lg bg-gray-900 text-white font-medium hover:bg-black transition"
         >
-          Create account
+          Buat Akun
         </button>
 
       </form>
@@ -117,7 +117,7 @@ include("includes/header.php")
     <!-- RIGHT : IMAGE -->
     <div class="hidden md:block relative">
       <img 
-        src="assets/img/dina.png"
+        src="assets/img/register.jpg"
         alt="Register Illustration"
         class="w-full h-full object-cover"
       />

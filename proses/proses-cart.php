@@ -7,12 +7,12 @@ include_once __DIR__ . '/../config/class-cart.php';
 
 
 if (!isset($_SESSION['auth'])) {
-    echo json_encode(['status' => 401, 'message' => 'Login dulu bro']);
+    echo json_encode(['status' => 401, 'message' => 'Login terlebih dahulu']);
     exit;
 }
 
 $userId = $_SESSION['auth_user']['id_user'];
-$cart   = new Cart(); // otomatis koneksi dari parent Database
+$cart   = new Cart(); 
 
 $scope = $_POST['scope'] ?? '';
 

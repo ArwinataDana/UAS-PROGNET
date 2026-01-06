@@ -120,4 +120,34 @@ class Payment extends Database {
     return $stmt->get_result()->fetch_assoc();
 }
 
+public function deletePaymentByOrder($orderId){
+
+    $query = "SELECT bukti_pembayaran FROM tb_payment WHERE id_order = ? LIMIT 1";
+    $stmt = $this->conn->prepare($query);
+    if(!$stmt) return false;
+
+    $stmt->bind_param("i", $orderId);
+    $stmt->execute();
+    $result = $stmt->get_result()->fetch_assoc();
+
+    if($result){
+
+        // PATH SESUAI POSISI order-details.php
+        $path = __DIR__ . "/../uploads/payments/" . $result['bukti_pembayaran'];
+
+        if (!empty($result['bukti_pembayaran']) && file_exists($path)) {
+            unlink($path); // ✅ hapus file
+        }
+    }
+
+    $delete = "DELETE FROM tb_payment WHERE id_order = ?";
+    $stmt2 = $this->conn->prepare($delete);
+    if(!$stmt2) return false;
+
+    $stmt2->bind_param("i", $orderId);
+    return $stmt2->execute();
+}
+
+
+
 }

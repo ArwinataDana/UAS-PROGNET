@@ -35,7 +35,7 @@ class Auth extends Database {
         if($this->isEmailExist($email)){
             return [
                 'status' => false,
-                'message' => 'Email already registered'
+                'message' => 'Email sudah di daftarkan'
             ];
         }
 
@@ -43,7 +43,7 @@ class Auth extends Database {
         if($password != $cpassword){
             return [
                 'status' => false,
-                'message' => 'Passwords do not match'
+                'message' => 'Passwords tidak sesuai'
             ];
         }
 
@@ -57,7 +57,7 @@ class Auth extends Database {
         if(!$stmt){
             return [
                 'status' => false,
-                'message' => 'Something went wrong'
+                'message' => 'Terjadi kesalahan, coba lagi'
             ];
         }
 
@@ -68,12 +68,12 @@ class Auth extends Database {
         if($result){
             return [
                 'status' => true,
-                'message' => 'Registered Successfully'
+                'message' => 'Berhasil mendaftarkan'
             ];
         } else {
             return [
                 'status' => false,
-                'message' => 'Something went wrong'
+                'message' => 'Terjadi kesalahan, coba lagi'
             ];
         }
     }
@@ -86,7 +86,7 @@ class Auth extends Database {
         if(!$stmt){
             return [
                 'status' => false,
-                'message' => 'Something went wrong'
+                'message' => 'Terjadi kesalahan, coba lagi'
             ];
         }
 
@@ -114,14 +114,14 @@ class Auth extends Database {
                 $stmt->close();
                 return [
                     'status' => false,
-                    'message' => 'Invalid Credentials'
+                    'message' => 'Data yang Anda masukkan tidak sesuai'
                 ];
             }
         } else {
             $stmt->close();
             return [
                 'status' => false,
-                'message' => 'Invalid Credentials'
+                'message' => 'Data yang Anda masukkan tidak sesuai'
             ];
         }
     }

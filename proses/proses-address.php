@@ -5,7 +5,6 @@ require_once '../config/class-address.php';
 $address = new Address();
 $user_id = $_SESSION['auth_user']['id_user'];
 
-// ADD
 if (isset($_POST['add_address'])) {
 
     $alamat   = $_POST['alamat'];

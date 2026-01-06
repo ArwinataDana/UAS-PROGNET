@@ -29,9 +29,9 @@ if (isset($_POST['login_btn'])) {
 
         // Redirect based on role
         if($result['data']['role'] == 1){
-            redirect("../admin/index.php", "Welcome To Admin Dashboard");
+            redirect("../admin/index.php", "Selamat datang di Dashboard Admin");
         } else {
-            redirect("../index.php", "Logged In Successfully");
+            redirect("../index.php", "Login Berhasil");
         }
 
     } else {

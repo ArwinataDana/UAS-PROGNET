@@ -12,12 +12,12 @@ $user = new User();
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-14 mt-14">
 
         <?php
-        // Panggil function yang sudah kita buat sebelumnya
+
         $products = $user->getDiscountedProducts(20, 'diskon DESC');
 
         if (!empty($products)) {
             foreach ($products as $item) {
-                $diskon = round($item['diskon']); // dari query AS diskon
+                $diskon = round($item['diskon']); 
                 ?>
                 <a href="product-view.php?product=<?= $item['slug'] ?>" class="group block relative">
 
@@ -27,7 +27,7 @@ $user = new User();
                              class="max-h-full w-auto object-contain">
                     </div>
 
-                    <!-- Badge diskon (ditambah biar lebih menarik) -->
+
                     <div class="absolute -top-2 -right-4 bg-red-600 text-white text-xs font-bold px-2.5 py-1 rounded-full z-10 shadow-md">
                         -<?= $diskon ?>%
                     </div>

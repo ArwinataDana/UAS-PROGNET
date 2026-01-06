@@ -3,7 +3,7 @@
 session_start();
 
 if (isset($_SESSION['auth'])) {
-    $_SESSION['message'] = "You are already Logged In";
+    $_SESSION['message'] = "Anda sudah masuk ke akun Anda.";
     header('Location: index.php');
     exit();
 }
@@ -11,17 +11,17 @@ if (isset($_SESSION['auth'])) {
 include("includes/header.php") 
 ?>
 
-<div class="mt-28 flex items-center justify-center px-4">
+<div class="h-screen flex items-center justify-center px-4">
 
   <div class="w-full max-w-md bg-white rounded-2xl shadow-sm border border-gray-200 p-8 space-y-10">
 
   <div>
     <h2 class="text-center text-3xl font-semibold text-gray-900 mb-5">
-      Welcome
+      Login
     </h2>
 
     <p class="text-center text-gray-500 text-sm">
-      Sign in to your account
+      Masuk ke Akun Anda
     </p>
 
   </div>
@@ -42,7 +42,7 @@ include("includes/header.php")
           class="peer w-full h-11 border-b border-gray-300 bg-transparent text-gray-900 placeholder-transparent focus:outline-none focus:border-gray-900"
         />
       <label class="absolute left-0 -top-4 text-xs text-gray-500">
-        Email address
+        Email
       </label>
 
       </div>
@@ -67,15 +67,15 @@ include("includes/header.php")
         name="login_btn"
         class="w-full h-11 rounded-lg bg-gray-900 text-white font-medium hover:bg-black transition"
       >
-        Sign in
+        Masuk
       </button>
 
     </form>
 
     <div class="text-center text-sm text-gray-500">
-      Don’t have an account?
+      Belum memiliki akun?
       <a href="register.php" class="text-gray-900 hover:underline font-medium">
-        Create one
+        Buat akun
       </a>
     </div>
 

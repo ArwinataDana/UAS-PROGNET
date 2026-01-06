@@ -23,9 +23,9 @@ $user = new User();
                         <p>Mulai dari</p>
                         <p class='text-3xl'>Rp 21.999.000</p>
                     </div>
-                    <a href="https://aldyne-landing-page.vercel.app/">
+                    <a href="http://localhost:5173/">
 
-                        <button class='bg-slate-800 text-white text-sm py-2.5 px-7 sm:py-5 sm:px-12 mt-4 sm:mt-10 rounded-md hover:bg-slate-900 hover:scale-103 active:scale-95 transition'>Selengkapnnya</button>
+                        <button class='bg-slate-800 text-white text-sm py-2.5 px-7 sm:py-5 sm:px-12 mt-4 sm:mt-10 rounded-md hover:bg-slate-900 hover:scale-103 active:scale-95 transition'>Selengkapnya</button>
                     </a>
                 </div>
                 <img src="assets/img/dina-bg.png" alt="" class='sm:absolute bottom-0 right-0 md:right-10 w-full sm:max-w-sm'>
@@ -124,7 +124,6 @@ $user = new User();
         <h2 class='text-2xl font-semibold text-slate-800'>Produk Populer</h2>
         <a href="trending.php" class='flex items-center gap-5 text-sm text-slate-600 mt-2'>
         <?php
-            // Panggil fungsinya
             $trendingNo = $user->getTrendingNumber();
         ?>
 
@@ -173,39 +172,39 @@ $user = new User();
         <?php
             }
         } else {
-            echo "<p class='text-gray-600 col-span-4 text-center'>No data available</p>";
+            echo "<p class='text-gray-600 col-span-4 text-center'>Data tidak tersedia</p>";
         }
         ?>
     </div>
 
     <div class='flex flex-col items-center mt-24'>
-        <h2 class='text-2xl font-semibold text-slate-800'>Our Specifications</h2>
+        <h2 class='text-2xl font-semibold text-slate-800'>Rincian Layanan</h2>
         <a href="#" class='flex items-center gap-5 text-sm text-slate-600 mt-2'>
-            <p class='max-w-lg text-center'> We offer top-tier service and convenience to ensure your shopping experience is smooth, secure and completely hassle-free.</p>
+            <p class='max-w-lg text-center'>Kami menawarkan layanan terbaik untuk memastikan pengalaman belanja Anda lancar, aman, dan sepenuhnya bebas kendala."</p>
         </a>
     </div>
 
     <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 gap-y-10 mt-14'>
-        <div class='relative h-44 px-8 flex flex-col items-center justify-center w-full text-center border rounded-lg group bg-green-200'>
-            <h3 class='text-slate-800 font-medium'>Free Shipping</h3>
-            <p class='text-sm text-slate-600 mt-3'>Enjoy fast, free delivery on every order no conditions, just reliable doorstep.</p>
-            <div class='absolute -top-5 text-white size-10 flex items-center justify-center rounded-md group-hover:scale-105 transition bg-green-400'>
+        <div class='relative h-44 px-8 flex flex-col items-center justify-center w-full text-center border rounded-lg group bg-slate-300'>
+            <h3 class='text-slate-800 font-medium'>Pengiriman Gratis</h3>
+            <p class='text-sm text-slate-600 mt-3'>Nikmati pengiriman cepat dan gratis tanpa syarat apa pun.</p>
+            <div class='absolute -top-5 text-white size-10 flex items-center justify-center rounded-md group-hover:scale-105 transition bg-slate-500'>
                 <i class="ri-send-plane-line"></i>
             </div>
         </div>
 
-        <div class='relative h-44 px-8 flex flex-col items-center justify-center w-full text-center border rounded-lg group bg-orange-200'>
-            <h3 class='text-slate-800 font-medium'>7 Days easy Return</h3>
-            <p class='text-sm text-slate-600 mt-3'>Change your mind? No worries. Return any item within 7 days.</p>
-            <div class='absolute -top-5 text-white size-10 flex items-center justify-center rounded-md group-hover:scale-105 transition bg-orange-400'>
+        <div class='relative h-44 px-8 flex flex-col items-center justify-center w-full text-center border rounded-lg group bg-slate-300'>
+            <h3 class='text-slate-800 font-medium'>Garansi Pengembalian</h3>
+            <p class='text-sm text-slate-600 mt-3'>Ubah pikiran? Tidak masalah. Nikmati kemudahan retur dalam 7 hari.</p>
+            <div class='absolute -top-5 text-white size-10 flex items-center justify-center rounded-md group-hover:scale-105 transition bg-slate-500'>
                 <i class="ri-time-line text-white"></i>
             </div>
         </div>
 
-        <div class='relative h-44 px-8 flex flex-col items-center justify-center w-full text-center border rounded-lg group bg-purple-200'>
-            <h3 class='text-slate-800 font-medium'>24/7 Customer Support</h3>
-            <p class='text-sm text-slate-600 mt-3'>We're here for you. Get expert help with our customer support.</p>
-            <div class='absolute -top-5 text-white size-10 flex items-center justify-center rounded-md group-hover:scale-105 transition bg-purple-400'>
+        <div class='relative h-44 px-8 flex flex-col items-center justify-center w-full text-center border rounded-lg group bg-slate-300'>
+            <h3 class='text-slate-800 font-medium'>Layanan 24 Jam Nonstop</h3>
+            <p class='text-sm text-slate-600 mt-3'>Hubungi layanan pelanggan kami kapan pun kamu butuh bantuan atau saran.</p>
+            <div class='absolute -top-5 text-white size-10 flex items-center justify-center rounded-md group-hover:scale-105 transition bg-slate-500'>
                 <i class="ri-customer-service-2-line text-white"></i>
             </div>
         </div>

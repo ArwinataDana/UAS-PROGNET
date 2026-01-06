@@ -212,24 +212,23 @@ public function searchProducts($keyword){
         return $products;
     }
 
-public function getTrendingNumber() {
-    $query = "SELECT * FROM tb_produk WHERE popularitas = 1";
-    $stmt = $this->conn->prepare($query);
+    public function getTrendingNumber() {
+        $query = "SELECT * FROM tb_produk WHERE popularitas = 1";
+        $stmt = $this->conn->prepare($query);
 
-    if(!$stmt){
-        return 0; // Kembalikan 0 jika gagal
+        if(!$stmt){
+            return 0; // Kembalikan 0 jika gagal
+        }
+
+        $stmt->execute();
+        $result = $stmt->get_result();
+        
+        // Ambil jumlah barisnya saja
+        $total = $result->num_rows;
+
+        $stmt->close();
+        return $total; 
     }
-
-    $stmt->execute();
-    $result = $stmt->get_result();
-    
-    // Ambil jumlah barisnya saja
-    $total = $result->num_rows;
-
-    $stmt->close();
-    return $total; 
-}
-
 
 
 

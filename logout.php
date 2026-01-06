@@ -6,7 +6,7 @@ if (isset($_SESSION['auth'])) {
 
     unset($_SESSION['auth']);
     unset($_SESSION['auth_user']);
-    $_SESSION['message'] = "Logout Successfully";
+    $_SESSION['message'] = "Berhasil Logout";
 
 }
 session_destroy();

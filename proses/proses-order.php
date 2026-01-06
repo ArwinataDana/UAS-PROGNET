@@ -16,7 +16,6 @@ if (!isset($_POST['placeOrderBtn'])) {
     exit;
 }
 
-// Ambil data dari form
 $userId   = $_SESSION['auth_user']['id_user'];
 $nama     = trim($_POST['nama_user']);
 $email    = trim($_POST['email']);
@@ -32,7 +31,6 @@ if (empty($nama) || empty($email) || empty($phone) || empty($alamat) || $total <
     exit;
 }
 
-// Pakai $con yang sudah dibuat di db-config.php
 global $con;
 
 $user = new User();

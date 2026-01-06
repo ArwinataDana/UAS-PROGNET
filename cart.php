@@ -15,7 +15,7 @@ foreach ($items as $citem) {
 <div class="mx-6 text-slate-800 mt-24">
     <div class="max-w-[1400px] mx-auto lg:px-4">
 
-        <h2 class="text-3xl font-bold mb-8">My Cart</h2>
+        <h2 class="text-3xl font-bold mb-8">Keranjangmu</h2>
 
         <?php if (count($items) > 0): ?>
 
@@ -26,10 +26,10 @@ foreach ($items as $citem) {
             <table class="w-full text-slate-600 table-auto">
                 <thead>
                     <tr class="border-b max-sm:text-sm">
-                        <th class="text-left py-3">Product</th>
-                        <th class="text-center">Quantity</th>
-                        <th class="text-center max-sm:hidden">Total Price</th>
-                        <th class="text-center max-md:hidden">Remove</th>
+                        <th class="text-left py-3">Produk</th>
+                        <th class="text-center">Jumlah</th>
+                        <th class="text-center max-sm:hidden">Total</th>
+                        <th class="text-center max-md:hidden">Hapus</th>
                     </tr>
                 </thead>
 
@@ -59,7 +59,7 @@ foreach ($items as $citem) {
                                         <!-- Remove button for mobile -->
                                         <button class="deleteItem text-red-500 text-xs mt-2 md:hidden hover:underline"
                                                 value="<?= $cart['cid'] ?>">
-                                            Remove
+                                            Hapus
                                         </button>
                                     </div>
                                 </div>
@@ -90,7 +90,7 @@ foreach ($items as $citem) {
                             <td class="text-center max-md:hidden">
                                 <button class="deleteItem text-red-500 hover:bg-red-50 p-2.5 rounded-full transition-all text-sm"
                                         value="<?= $cart['cid'] ?>">
-                                    Remove
+                                    Hapus
                                 </button>
                             </td>
                         </tr>
@@ -101,17 +101,17 @@ foreach ($items as $citem) {
             <!-- ORDER SUMMARY -->
             <div class="w-full max-w-lg lg:max-w-[340px] bg-slate-50/30 border border-slate-200 text-slate-500 text-sm rounded-xl p-7">
 
-                <h2 class="text-xl font-medium text-slate-600 mb-4">Payment Summary</h2>
+                <h2 class="text-xl font-medium text-slate-600 mb-4">Rincian Pambayaran</h2>
 
                 <div class="pb-4 border-b border-slate-200">
                     <div class="flex justify-between">
                         <div class="flex flex-col gap-1 text-slate-400">
                             <p>Subtotal:</p>
-                            <p>Shipping:</p>
+                            <p>Pengiriman:</p>
                         </div>
                         <div class="flex flex-col gap-1 font-medium text-right">
                             <p>Rp <?= number_format($totalPrice,0,',','.') ?></p>
-                            <p>Free</p>
+                            <p>Gratis</p>
                         </div>
                     </div>
                 </div>
@@ -125,7 +125,7 @@ foreach ($items as $citem) {
 
                 <a href="checkout.php"
                    class="block text-center w-full bg-slate-700 text-white py-2.5 rounded hover:bg-slate-900 active:scale-95 transition-all">
-                    Place Order
+                    Pesan Sekarang
                 </a>
 
             </div>
@@ -135,7 +135,7 @@ foreach ($items as $citem) {
         <?php else: ?>
 
         <div class="mt-10 flex items-center justify-center text-slate-400">
-            <h1 class="text-2xl sm:text-4xl font-semibold">Your cart is empty</h1>
+            <h1 class="text-2xl sm:text-4xl font-semibold">Keranjangmu kosong</h1>
         </div>
 
         <?php endif; ?>

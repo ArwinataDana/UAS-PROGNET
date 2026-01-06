@@ -131,7 +131,15 @@ $orders  = getOrders();
                                                     </span>
 
                                                     <!-- PAYMENT STATUS -->
-                                                    <?php if (empty($order['paid_order_id'])): ?>
+                                                    <?php if ($order['status'] == 4): ?>
+
+                                                        <!-- REFUND -->
+                                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium 
+                                                                    bg-red-50 text-red-700 ring-1 ring-inset ring-red-600/20">
+                                                            Refund
+                                                        </span>
+
+                                                    <?php elseif (empty($order['paid_order_id'])): ?>
                                                         <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium 
                                                                     bg-amber-50 text-amber-700 ring-1 ring-inset ring-amber-600/20">
                                                             Menunggu Pembayaran

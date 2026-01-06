@@ -21,6 +21,12 @@ require_once "config/class-payment.php";
 $paymentObj = new Payment();
 $payment = $paymentObj->getPaymentByOrder($order['id_order']);
 
+if ($order && $order['status'] == 4 && $payment) {
+    $paymentObj->deletePaymentByOrder($order['id_order']);
+    $payment = null; 
+}
+
+
 
 if (!$order) {
     ?>
@@ -121,9 +127,21 @@ if (!$order) {
             <!-- Bukti Pembayaran / Form Upload -->
             <div class="bg-gray-50 rounded-3xl p-10 border border-gray-200">
                 <h2 class="text-2xl font-bold text-gray-900 mb-8 tracking-tight">Pembayaran</h2>
+
+                <?php if ($order['status'] == 4): ?>
+
+                    <!-- JIKA ORDER DIBATALKAN -->
+                    <div class="bg-red-50 border border-red-200 rounded-2xl p-8 text-center">
+                        <i class="ri ri-refund-2-line text-5xl text-red-500 mb-4 block"></i>
+                        <h3 class="text-2xl font-bold text-red-700 mb-2">Pesanan Dibatalkan</h3>
+                        <p class="text-sm text-red-600 leading-relaxed">
+                            Bukti pembayaran telah dihapus.<br>
+                            Dana akan diproses untuk <span class="font-semibold">refund</span> jika sudah dibayar.
+                        </p>
+                    </div>
                 
 
-                <?php if (!$payment): ?>
+                <?php elseif (!$payment): ?>
                     <!-- Form Upload Bukti -->
                     <form action="proses/proses-payment.php" method="POST" enctype="multipart/form-data" class="space-y-6 mt-8">
                         <input type="hidden" name="id_order" value="<?= $order['id_order'] ?>">

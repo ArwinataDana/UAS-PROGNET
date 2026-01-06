@@ -5,7 +5,7 @@
                     <a href="/" class="text-4xl font-semibold text-slate-700">
                         <img src="assets/img/ALDYN.png" alt="" class="w-48">
                     </a>
-                    <p class="max-w-[410px] mt-6 text-sm">Welcome to gocart, your ultimate destination for the latest and smartest gadgets. From smartphones and smartwatches to essential accessories, we bring you the best in innovation — all in one place.</p>
+                    <p class="max-w-[410px] mt-6 text-sm">Pusat Gadget Apple Resmi & Terlengkap. Aldyne Store hadir sebagai Authorized Reseller untuk memastikan Anda mendapatkan produk Apple terbaru dan tercanggih dengan kualitas terjamin. Mulai dari smartphone hingga aksesori esensial, semua inovasi terbaik ada di sini.</p>
                     <div class="flex items-center gap-3 mt-5">
 
                         <a href="" class="flex items-center justify-center w-10 h-10 bg-gray-200 hover:scale-105 hover:border border-slate-300 transition rounded-full">

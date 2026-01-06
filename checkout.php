@@ -17,7 +17,7 @@ foreach ($items as $citem) {
     $totalPrice += $citem['harga_jual'] * $citem['prod_qty'];
 }
 
-$estimatedTax = 0; // Estimasi pajak
+
 $subtotal = $totalPrice;
 $grandTotal = $subtotal;
 ?>
@@ -27,11 +27,11 @@ $grandTotal = $subtotal;
         
         <!-- Breadcrumb -->
         <div class="flex items-center gap-2 text-sm mb-8 text-gray-600">
-            <a href="cart.php" class="hover:text-gray-900">Cart</a>
+            <a href="cart.php" class="hover:text-gray-900">Keranjang</a>
             <span>›</span>
-            <span class="font-medium text-gray-900">Shipping</span>
+            <span class="font-medium text-gray-900">Pengiriman</span>
             <span>›</span>
-            <span class="text-gray-400">Payment</span>
+            <span class="text-gray-400">Pembayaran</span>
         </div>
 
         <?php if(empty($items)): ?>
