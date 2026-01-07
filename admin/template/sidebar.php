@@ -36,6 +36,10 @@
         <i class="ri-shield-user-line text-xl"></i>
         <span>User Role</span>
       </a>
+      <a href="log.php" class="nav-item flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/10 transition">
+        <i class="ri-file-list-line text-xl"></i>
+        <span>Order Log</span>
+      </a>
     <?php endif; ?>
 
     <?php if (isset($_SESSION['role']) && in_array($_SESSION['role'], [1, 2])): ?>
@@ -50,10 +54,6 @@
       <a href="order-history.php" class="nav-item flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/10 transition">
         <i class="ri-history-line text-xl"></i>
         <span>Order History</span>
-      </a>
-      <a href="log.php" class="nav-item flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/10 transition">
-        <i class="ri-file-list-line text-xl"></i>
-        <span>Order Log</span>
       </a>
     <?php endif; ?>
   </nav>
